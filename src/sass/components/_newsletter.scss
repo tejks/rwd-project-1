@@ -1,0 +1,45 @@
+.newsletter {
+  position: relative;
+  background-color: $dark-blue-1;
+  border-radius: 5px;
+  margin-top: 10rem;
+  margin-bottom: -12rem;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__heading {
+    color: $color-white;
+    font-size: 4rem;
+    margin: 2.5rem 0;
+    text-align: center;
+
+    @include respond(phone) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__text {
+    width: 75%;
+    color: $light-grey;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  &__form {
+    margin: 4rem 0;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-gap: 2rem;
+    justify-items: center;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-auto-columns: min-content;
+    }
+  }
+}

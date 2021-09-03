@@ -1,0 +1,74 @@
+.header {
+  grid-column: full-start / full-end;
+
+  background-color: $dark-blue-1;
+  position: relative;
+  margin-bottom: -5rem;
+
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: max-content;
+  justify-content: center;
+
+  @include respond(phone) {
+    margin-bottom: -10rem;
+  }
+
+  &__context {
+    grid-column: center-start / center-end;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25rem;
+
+    & > * {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 65%;
+  }
+
+  &__heading {
+    width: 65%;
+    text-align: center;
+  }
+
+  &__paragraph {
+    width: 55%;
+    text-align: center;
+    color: $light-grey;
+    font-size: 2.5rem;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone-land) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    width: 20%;
+
+    @include respond(phone) {
+      width: initial;
+    }
+  }
+
+  &__background {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}

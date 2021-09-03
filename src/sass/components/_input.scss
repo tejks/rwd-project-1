@@ -1,0 +1,36 @@
+.input {
+  border-radius: 4rem;
+  border: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--email {
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    width: 100%;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+      padding: 1.2rem 1.6rem;
+    }
+  }
+
+  &--submit {
+    background-image: linear-gradient(to right, $color-cyan-gradient, $color-blue-gradient);
+    color: $color-white;
+    cursor: pointer;
+    padding: 0 2rem;
+
+    @include respond(tablet) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+      padding: 1.2rem 2rem;
+    }
+  }
+}

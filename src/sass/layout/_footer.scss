@@ -1,0 +1,147 @@
+.footer {
+  grid-column: full-start / full-end;
+
+  background-color: $dark-blue-3;
+  padding: 6rem 12rem;
+  padding-top: 17rem;
+  color: $light-grey;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tablet-land) {
+    padding: 6rem 4rem;
+    padding-top: 17rem;
+  }
+
+  &__logo {
+    width: 20rem;
+    margin: 0 auto;
+
+    @include respond(large-desktop) {
+      grid-column: 2 / 3;
+    }
+
+    @include respond(tablet-land) {
+      grid-column: 1 / 2;
+    }
+
+    @include respond(tablet) {
+      grid-column: 1 / 2;
+    }
+
+    @include respond(phone-land) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__context {
+    margin-top: 7rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+
+    grid-gap: 5rem;
+
+    @include respond(large-desktop) {
+      grid-template-columns: 1fr min-content 50rem min-content 15rem 15rem 1fr;
+    }
+
+    @include respond(tablet-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__localization {
+    padding: 0 5rem;
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 2rem;
+
+    img {
+      width: 2.5rem;
+      margin: 0.6rem 1rem;
+    }
+
+    @include respond(large-desktop) {
+      grid-column: 3 / 4;
+    }
+
+    @include respond(tablet-land) {
+      grid-column: 2 / 3;
+    }
+
+    @include respond(phone-land) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__localization-text {
+    font-size: 2rem;
+  }
+
+  &__contact {
+    font-size: 1.8rem;
+    padding: 0 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-gap: 3rem;
+    justify-content: center;
+    align-content: start;
+    justify-items: center;
+    align-items: center;
+
+    @include respond(large-desktop) {
+      grid-column: 4 / 5;
+    }
+
+    @include respond(tablet-land) {
+      grid-column: 3 / 4;
+    }
+
+    @include respond(tablet) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__nav {
+    padding: 0 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(5rem, 1fr));
+
+    grid-gap: 3rem;
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $light-grey;
+    transition: 0.3s all;
+    display: block;
+
+    &:hover,
+    &:active {
+      color: $color-white;
+      font-size: 1.9rem;
+    }
+  }
+}
